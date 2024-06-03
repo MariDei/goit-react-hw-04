@@ -6,14 +6,14 @@ const Loader = () => {
     <div>
       <RotatingLines
         visible={true}
-        height="96"
-        width="96"
+        height="50"
+        width="50"
         color="grey"
         strokeWidth="5"
         animationDuration="0.75"
         ariaLabel="rotating-lines-loading"
-        wrapperStyle={{ justifyContent: 'center' }}
         wrapperClass=""
+        wrapperStyle={{}}
       />
       <p>Loading... please wait...</p>
     </div>

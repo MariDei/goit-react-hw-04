@@ -10,7 +10,7 @@ export const getImagesApi = async (searchQuery, page) => {
       client_id: ACCESS_KEY,
       query: searchQuery,
       page,
-      per_page: 10,
+      per_page: 9,
     },
   });
   return data.results;
