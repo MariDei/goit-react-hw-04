@@ -1,5 +1,5 @@
 import Modal from 'react-modal';
-// import css from './ImageModal.module.css';
+import css from './ImageModal.module.css';
 
 Modal.setAppElement('#root');
 
@@ -33,6 +33,14 @@ const ImageModal = ({ modalIsOpen, modalIsClose, image }) => {
         alt={image.alt_description}
         orientation={image.landscape}
       />
+      <ul className={css.wrapper}>
+        <li className={css.info}>
+          Photographer: <span className={css.span}>{image.user.name}</span>{' '}
+        </li>
+        <li className={css.info}>
+          Likes: <span className={css.span}>{image.likes}</span>{' '}
+        </li>
+      </ul>
     </Modal>
   );
 };
