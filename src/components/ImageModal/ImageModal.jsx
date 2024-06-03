@@ -1,8 +1,6 @@
 import Modal from 'react-modal';
 import css from './ImageModal.module.css';
 
-Modal.setAppElement('#root');
-
 const customStyles = {
   content: {
     top: '50%',
@@ -18,6 +16,8 @@ const customStyles = {
   },
 };
 
+Modal.setAppElement('#root');
+
 const ImageModal = ({ modalIsOpen, modalIsClose, image }) => {
   return (
     <Modal
@@ -29,9 +29,9 @@ const ImageModal = ({ modalIsOpen, modalIsClose, image }) => {
       closeOnEsc={true}
     >
       <img
+        className={css.image}
         src={image.urls.regular}
         alt={image.alt_description}
-        orientation={image.landscape}
       />
       <ul className={css.wrapper}>
         <li className={css.info}>

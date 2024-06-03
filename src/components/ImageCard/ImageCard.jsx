@@ -2,14 +2,14 @@ import css from './ImageCard.module.css';
 
 function ImageCard({ image, onImageModal }) {
   return (
-    <div className={css.item} onClick={() => onImageModal(image)}>
+    <div className={css.item}>
       <img
         className={css.image}
         src={image.urls.small}
         alt={image.alt_description}
-        orientation={image.landscape}
         width={370}
         height={270}
+        onClick={() => onImageModal(image)}
       />
       <ul className={css.wrapper}>
         <li className={css.info}>

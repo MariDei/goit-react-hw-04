@@ -13,7 +13,7 @@ function SearchBar({ onSubmit }) {
             toast.error('Search field cannot be empty!', {
               style: {
                 borderRadius: '10px',
-                background: '#333',
+                backgroundColor: '#333',
                 color: 'red',
               },
             });
